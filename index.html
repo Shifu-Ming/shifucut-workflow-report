@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="SHIFUCUT 自動化剪輯系統：從毛片整理、多機同步、辨識到智能剪輯與交付，附每小時毛片成本與固定月費估算。">
-  <title>SHIFUCUT｜自動化剪輯系統・流程與費用</title>
+  <meta name="description" content="SHIFUCUT 自動化剪輯系統：從毛片整理、多機同步、辨識到智能剪輯與交付的完整流程。">
+  <title>SHIFUCUT｜自動化剪輯系統・流程總覽</title>
   <style>
     /* 報告採用 SHIFUCUT 共用色票的快照；字級依主管簡報用途放大。 */
     :root{color-scheme:dark;--bg:#111113;--panel:#18191B;--panel2:#272A2D;--line:#363A3F;--text:#EDEEF0;--dim:#B0B4BA;--dim2:#8B9098;--accent:#78ABE8;--ai:#D98C70;--accent-soft:color-mix(in srgb,var(--accent) 8%,var(--panel));--ai-soft:color-mix(in srgb,var(--ai) 9%,var(--panel));--ai-line:color-mix(in srgb,var(--ai) 55%,var(--line))}
@@ -103,24 +103,7 @@
       </section>
     </section>
 
-    <section class="cost-section" id="costs" aria-labelledby="cost-title">
-      <div class="section-heading"><div><h2 id="cost-title">花費估算</h2><p>以每 1 小時毛片估算，固定月費另列。</p></div><span class="estimate-tag">預算估算・新台幣</span></div>
-      <div class="cost-layout">
-        <article class="cost-card"><h3>若改採按量計費・比較參考</h3><div class="big-cost"><span class="currency">NT$</span><strong>210–270</strong><span class="unit">/ 小時毛片</span></div><p class="cost-caption">以雲端辨識＋文字校正＋Claude 剪輯估算。</p><div class="cost-rows"><div class="cost-row"><span>檔案整理、同步、輸出<small>固定程式執行，無新增 AI 用量費</small></span><span class="amount">0</span></div><div class="cost-row"><span>辨識＋文字校正</span><span class="amount">約 10–20</span></div><div class="cost-row"><span>智能剪輯<small>以既有 Opus 樣本換算，預留用量差異</small></span><span class="amount orange">約 200–250</span></div></div></article>
-        <article class="cost-card monthly-card"><h3>目前使用・Claude Team 訂閱</h3><div class="big-cost"><span class="currency">NT$</span><strong>640–4,000</strong><span class="unit">/ 席 / 月</span></div><p class="cost-caption">另加辨識與文字校正：約 NT$10–20／小時毛片。</p><div class="cost-rows"><div class="cost-row"><span>標準席次 Standard<small>年繳月均／月繳，每席估算</small></span><span class="amount">約 640／800</span></div><div class="cost-row"><span>進階席次 Premium<small>年繳月均／月繳，每席估算</small></span><span class="amount">約 3,200／4,000</span></div><div class="cost-row"><span>雲端監控資料庫<small>共用費用，不按席次累加</small></span><span class="amount">另計約 320／月</span></div></div><p class="no-double"><strong>Team 額度內，不再加收左側的剪輯等值費。</strong><br>公司訂閱總額依席次種類與數量計算；超額使用另計。</p></article>
-      </div>
-      <p class="cost-foot">按量方案另計監控約 NT$320／月。以上未含稅、開發維護、人工校正、設備電力及既有 Premiere 授權；預算換算採 US$1＝NT$32。</p>
-      <div class="assets"><div class="asset"><h3>後處理，提升 AI 接手品質</h3><p>素材、文字與時間先做準，降低後續誤判。</p></div><div class="asset"><h3>校正回饋，累積成公司能力</h3><p>確認與驗證後更新詞庫、規則及經驗庫。</p></div><div class="asset"><h3>模型升級，既有投入持續使用</h3><p>兩個 Agent 的流程與知識，可由新模型接手。</p></div></div>
-      <details id="sources"><summary>估算依據與範圍</summary><div class="source-content"><ol>
-        <li><strong>辨識＋文字校正：</strong>既有 GPU 樣本約 US$0.23–0.35／小時音訊；Gemini 舊規劃為 15 小時課程 US$1–2。合計約 NT$10–16，再取整為每小時 NT$10–20 的規劃預算。參考 10/12 雲端與本地辨識比對、10/16 辨識各階段耗時報告及 10/08 雲端管線設計；這是歷史資料推估，非目前帳單，也非現行模型的費率保證。本機辨識無雲端 GPU 用量費，AI 校正仍可能另計。</li>
-        <li><strong>剪輯：</strong>10/06 陳重銘課程 5-1、5-2、5-3，毛片合計 53 分 15 秒，剪輯 API 等值合計 US$5.68。US$5.68 ÷（3,195 秒 ÷ 3,600）＝US$6.40／小時，約 NT$205；以 NT$200–250 作預算範圍。重跑次數與內容複雜度會影響費用；此數值不含人工、後續修補及訂閱分攤。</li>
-        <li><strong>固定月費：</strong>公司使用 Claude Team。依<a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan" target="_blank" rel="noopener noreferrer">Claude 官方 Team 方案</a>的美國未稅定價估算：Standard 每席年繳月均 US$20／月繳 US$25，約 NT$640／800；Premium 每席年繳月均 US$100／月繳 US$125，約 NT$3,200／4,000。此處列每席預算，非全公司帳單；總額依實際席次種類、數量與繳費週期計算，地區價格可能不同。監控資料庫沿用 10/12 內部估算 US$10／月，約 NT$320，為共用費用。</li>
-        <li><strong>模型與交付：</strong>目前 Opus 依 Ming 提供的使用現況標示；現行批次入口使用 Claude Code。GPT／其他模型需接入並測試，不是已完成的一鍵切換。PR 交付是可匯入 Premiere 的 XML 序列；直接輸出 MP4 由工作台 App 完成。</li>
-        <li><strong>Agent 與持續迭代：</strong>已建立語音辨識助手（asr-quality）與 AI 剪輯助手（ai-cut），分別使用語音辨識大腦與課程剪輯大腦。角色流程、公司規則、詞庫與案例記憶保存在模型之外，換模型可沿用；工具接入、規則遵循與輸出品質仍須驗證。校正回饋需經確認、篩選與回歸驗證，再更新可沿用的知識與處理方式；持續迭代是改善機制，不代表每次重跑都更準，也不是模型自動永久學習。</li>
-      </ol><p class="source-note">整理日期：2026 年 10 月 21 日。費用以單一主音軌的毛片時長計算，多機同時拍攝不將每台攝影機重複加總；額外辨識多條音軌或重跑需另計。</p></div></details>
-      <p class="print-source">估算依據：辨識採 10/12、10/16 GPU 樣本與 10/08 Gemini 規劃；剪輯採 10/06 三支樣本 US$5.68／53:15，約 US$6.40／毛片小時，僅供按量比較。Claude Team 每席月費：Standard US$20／25、Premium US$100／125（年繳月均／月繳）；監控共用費用採內部 US$10／月估算。預算匯率 US$1＝NT$32。</p>
-    </section>
-    <footer style="justify-content:flex-end"><span>流程總覽與費用估算 · <time datetime="2026-10-21">2026.10.21</time></span></footer>
+    <footer style="justify-content:flex-end"><span>流程總覽 · <time datetime="2026-10-21">2026.10.21</time></span></footer>
   </main>
 </body>
 </html>
